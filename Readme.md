@@ -49,16 +49,24 @@ Login with existing credentials.
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTI1MjM4MDB9.mNhjMKGoar4LENDHnov5sj7lHbHfucn4fPn2047olfA"
 }
 ```
+
+
 Train Operations
-[POST] "/train/registerTrain"
+
+### [POST] "/train/registerTrain"
+
+
 Register a new train (include headers[x-api-key] = API_KEY).
 
-[GET] "/train/getSeatAvailability"
+
+### [GET] "/train/getSeatAvailability"
+
 Get seat availability information (include Bearer {token}).
+
 
 Response Example:
 
-
+```
 {
   "trains": [
     {
@@ -75,17 +83,22 @@ Response Example:
     }
   ]
 }
+```
+
 Booking Operations
-[POST] "/booking/bookSeat"
+
+### [POST] "/booking/bookSeat"
+
 Book seats on a train (include Bearer {token}).
 
-[GET] "/booking/getBookingDetails/:bookingId"
+
+### [GET] "/booking/getBookingDetails/:bookingId"
 Get booking details by ID (include Bearer {token}).
 
 Response Example:
 
 
-
+```
 {
   "booking": {
     "booking_id": 1,
@@ -96,13 +109,15 @@ Response Example:
     "updatedAt": "2024-04-07T23:21:22.630Z"
   }
 }
+```
+
 Station Operations
-[POST] "/station/registerStations"
+### [POST] "/station/registerStations"
 Register new stations (include headers[x-api-key] = API_KEY).
 
 Response Example:
 
-
+```
 {
   "message": "Train registered successfully",
   "train": {
@@ -118,3 +133,4 @@ Response Example:
     "createdAt": "2024-04-07T22:09:10.599Z"
   }
 }
+```
